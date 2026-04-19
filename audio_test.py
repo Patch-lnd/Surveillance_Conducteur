@@ -9,7 +9,7 @@ message = "Systeme actif. Test vocal reussi"
 print("Execution du test audio...")
 
 # dire le message
-engine.say(message)
+engine.say(message)                                                                                                                                         
 
 # exécuter la parole
 engine.runAndWait()
