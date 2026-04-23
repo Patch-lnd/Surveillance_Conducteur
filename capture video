@@ -1,0 +1,14 @@
+import cv2 as cv
+
+cam=cv.VideoCapture(0,cv.CAP_DSHOW)
+if cam.isOpened():
+    print("camera doesnot exist")
+while True:
+    status, frame =cam.read()
+    if not status:
+        print("cannot receive frame")
+    cv.imshow("capture video",frame)
+    if cv.waitKey(1)== ord('q'):
+        break
+cam.release()
+cv.destroyAllWindows()
